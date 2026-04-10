@@ -17,16 +17,24 @@
     <header class="header">
         <div class="container">
             <nav class="nav">
-                <a href="#home" class="logo"><img src="logo.png" alt="Logo" class="logo-img" onerror="this.style.display='none'">Dragões Metálicos</a>
+                <a href="#home" class="logo"><img src="logo.png" alt="Logo" class="logo-img"
+                        onerror="this.style.display='none'">Dragões Metálicos</a>
                 <div class="nav-right">
+                    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false"
+                        aria-controls="navLinks">
+                        <span class="menu-toggle-bar"></span>
+                        <span class="menu-toggle-bar"></span>
+                        <span class="menu-toggle-bar"></span>
+                    </button>
                     <ul class="nav-links" id="navLinks">
                         <li><a href="#projetos" data-en="Projects">Projetos</a></li>
                         <li><a href="#conquistas" data-en="Achievements">Conquistas</a></li>
-                        <li><a href="#patrocinadores" data-en="Sponsors">Patrocinadores</a></li>
-                        <li><a href="#doadores" class="nav-live-link">Doadores <span class="live-badge">LIVE</span></a></li>
+                        <li><a href="sponsors.html" data-en="Sponsors">Patrocinadores</a></li>
+                        <li><a href="gallery.html" data-en="Gallery">Galeria</a></li>
                         <li><a href="#patrocinar" class="nav-cta" data-en="Become a Sponsor">Seja Patrocinador</a></li>
                     </ul>
-                    <a href="https://hackclub.com" target="_blank" rel="noopener noreferrer" class="nav-hc-link" title="Hack Club">
+                    <a href="https://hackclub.com" target="_blank" rel="noopener noreferrer" class="nav-hc-link"
+                        title="Hack Club">
                         <img src="hc_logo.png" alt="Hack Club" class="nav-hc-logo">
                     </a>
                     <button class="lang-toggle" id="langToggle" aria-label="Change language">
@@ -41,6 +49,13 @@
 
     <!-- HERO -->
     <section class="hero" id="home">
+        <!--
+          FOTO DE FUNDO DO HERO:
+          1. Coloque o arquivo na pasta (ex: equipe-2025.jpg)
+          2. Descomente a tag <img> abaixo e preencha o src
+        -->
+        <!-- <img src="equipe-2025.jpg" alt="Equipe Dragões Metálicos" class="hero-bg-photo"> -->
+        <div class="hero-bg-overlay"></div>
         <div class="container">
             <div class="hero-content">
                 <h1 class="hero-title" data-en="Shaping the future through robotics">
@@ -87,6 +102,7 @@
             </div>
         </div>
     </section>
+
 
     <!-- PROJECTS -->
     <section class="projects" id="projetos">
@@ -201,79 +217,41 @@
                 </p>
             </div>
 
-            <div class="sponsors-tiers">
-                <div class="tier-section">
-                    <h3 class="tier-title">
-                        <span class="tier-icon">🥇</span>
-                        <span data-en="Gold Tier">Tier Ouro</span>
-                    </h3>
-                    <div class="sponsors-grid">
-                        <div class="sponsor-placeholder">
-                            <p data-en="Be our first sponsor">Seja nosso primeiro patrocinador</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="sponsors-flat-grid" id="sponsorsGrid">
+                <!--
+              COMO ADICIONAR UM PATROCINADOR:
+              Substitua um bloco .sponsor-placeholder-card por:
 
-                <div class="tier-section">
-                    <h3 class="tier-title">
-                        <span class="tier-icon">🥈</span>
-                        <span data-en="Silver Tier">Tier Prata</span>
-                    </h3>
-                    <div class="sponsors-grid">
-                        <div class="sponsor-placeholder">
-                            <p data-en="Be our first sponsor">Seja nosso primeiro patrocinador</p>
-                        </div>
-                    </div>
-                </div>
+              <a href="https://sitedompatrocinador.com" target="_blank" rel="noopener" class="sponsor-card">
+                <img src="caminho/logo.png" alt="Nome do Patrocinador" class="sponsor-logo">
+                <span class="sponsor-name">Nome da Empresa</span>
+              </a>
+            -->
+                <a href="#patrocinar" class="sponsor-placeholder-card">
+                    <span class="sponsor-plus">+</span>
+                    <span>Seja o primeiro patrocinador</span>
+                </a>
+                <a href="#patrocinar" class="sponsor-placeholder-card">
+                    <span class="sponsor-plus">+</span>
+                    <span>Sua empresa aqui</span>
+                </a>
+                <a href="#patrocinar" class="sponsor-placeholder-card">
+                    <span class="sponsor-plus">+</span>
+                    <span>Sua empresa aqui</span>
+                </a>
+            </div>
 
-                <div class="tier-section">
-                    <h3 class="tier-title">
-                        <span class="tier-icon">🥉</span>
-                        <span data-en="Bronze Tier">Tier Bronze</span>
-                    </h3>
-                    <div class="sponsors-grid">
-                        <div class="sponsor-placeholder">
-                            <p data-en="Be our first sponsor">Seja nosso primeiro patrocinador</p>
-                        </div>
-                    </div>
-                </div>
+            <div class="sponsors-flat-footer">
+                <a href="sponsors.html" class="sponsors-see-all" data-en="See all sponsors →">Ver página de
+                    patrocinadores →</a>
+                <a href="#patrocinar" class="btn btn-secondary"
+                    style="font-size:0.875rem; padding:0.6rem 1.25rem; width:auto;" data-en="Become a sponsor">Quero
+                    patrocinar</a>
             </div>
         </div>
     </section>
 
-    <!-- DONORS -->
-    <section class="donors" id="doadores">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title" data-en="Our Donors">Nossos Doadores <span class="live-badge">LIVE</span></h2>
-                <p class="section-description"
-                    data-en="Individuals who support our journey with personal contributions.">
-                    Pessoas que apoiam nossa jornada com contribuições pessoais.
-                </p>
-            </div>
 
-            <div class="donors-table-container">
-                <table class="donors-table" id="donorsTable">
-                    <thead>
-                        <tr>
-                            <th data-en="Name">Nome</th>
-                            <th data-en="Amount">Valor</th>
-                            <th data-en="Platform">Plataforma</th>
-                            <th data-en="Date">Data</th>
-                        </tr>
-                    </thead>
-                    <tbody id="donorsTableBody">
-                        <tr>
-                            <td colspan="4" class="loading-message" data-en="Loading donations...">Carregando doações...
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-
-
-        </div>
-    </section>
 
     <!-- BECOME A SPONSOR -->
     <section class="become-sponsor" id="patrocinar">
@@ -358,8 +336,8 @@
                     <ul>
                         <li><a href="#projetos" data-en="Projects">Projetos</a></li>
                         <li><a href="#conquistas" data-en="Achievements">Conquistas</a></li>
-                        <li><a href="#patrocinadores" data-en="Sponsors">Patrocinadores</a></li>
-                        <li><a href="#doadores" data-en="Donors">Doadores</a></li>
+                        <li><a href="sponsors.html" data-en="Sponsors">Patrocinadores</a></li>
+                        <li><a href="gallery.html" data-en="Gallery">Galeria</a></li>
                     </ul>
                 </div>
                 <div class="footer-column">

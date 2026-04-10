@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doações em tempo real | Dragões Metálicos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="index.html" class="logo"><img src="logo.png" alt="Logo" class="logo-img"
+                        onerror="this.style.display='none'">Dragões Metálicos</a>
+                <div class="nav-right">
+                    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false"
+                        aria-controls="navLinks">
+                        <span class="menu-toggle-bar"></span>
+                        <span class="menu-toggle-bar"></span>
+                        <span class="menu-toggle-bar"></span>
+                    </button>
+                    <ul class="nav-links" id="navLinks">
+                        <li><a href="index.html#projetos" data-en="Projects">Projetos</a></li>
+                        <li><a href="index.html#conquistas" data-en="Achievements">Conquistas</a></li>
+                        <li><a href="sponsors.html" data-en="Sponsors">Patrocinadores</a></li>
+                        <li><a href="gallery.html" data-en="Gallery">Galeria</a></li>
+                        <li><a href="index.html#patrocinar" class="nav-cta" data-en="Become a Sponsor">Seja Patrocinador</a></li>
+                    </ul>
+                    <a href="https://hackclub.com" target="_blank" rel="noopener noreferrer" class="nav-hc-link"
+                        title="Hack Club">
+                        <img src="hc_logo.png" alt="Hack Club" class="nav-hc-logo">
+                    </a>
+                    <button class="lang-toggle" id="langToggle" aria-label="Change language">
+                        <span class="lang-option active" data-lang="pt">PT</span>
+                        <span class="lang-divider">/</span>
+                        <span class="lang-option" data-lang="en">EN</span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <div style="margin-top: 100px;"></div>
+
+    <!-- DONORS -->
+    <section class="donors" id="doadores">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-en="Real-time Donations">Doações em tempo real <span class="live-badge">LIVE</span></h2>
+                <p class="section-description"
+                    data-en="Individuals who support our journey with personal contributions.">
+                    Pessoas que apoiam nossa jornada com contribuições pessoais.
+                </p>
+            </div>
+
+            <div class="donors-table-container">
+                <table class="donors-table" id="donorsTable">
+                    <thead>
+                        <tr>
+                            <th data-en="Name">Nome</th>
+                            <th data-en="Amount">Valor</th>
+                            <th data-en="Platform">Plataforma</th>
+                            <th data-en="Date">Data</th>
+                        </tr>
+                    </thead>
+                    <tbody id="donorsTableBody">
+                        <tr>
+                            <td colspan="4" class="loading-message" data-en="Loading donations...">Carregando doações...
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="footer-title">Dragões Metálicos</h3>
+                    <p
+                        data-en="Educational robotics team from Colégio Marista Sant'Ana, building the future through innovation and teamwork.">
+                        Equipe de robótica educacional do Colégio Marista Sant'Ana, construindo o futuro através da
+                        inovação e trabalho em equipe.
+                    </p>
+                </div>
+                <div class="footer-column">
+                    <h4 data-en="Quick Links">Links Rápidos</h4>
+                    <ul>
+                        <li><a href="index.html#projetos" data-en="Projects">Projetos</a></li>
+                        <li><a href="index.html#conquistas" data-en="Achievements">Conquistas</a></li>
+                        <li><a href="sponsors.html" data-en="Sponsors">Patrocinadores</a></li>
+                        <li><a href="gallery.html" data-en="Gallery">Galeria</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4 data-en="Contact">Contato</h4>
+                    <ul>
+                        <li><a href="mailto:contato@dragoesmetalicos.com">contato@dragoesmetalicos.com</a></li>
+                        <li><a href="#" data-en="Instagram">Instagram</a></li>
+                        <li><a href="#" data-en="GitHub">GitHub</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-en="© 2026 Dragões Metálicos. All rights reserved.">© 2026 Dragões Metálicos. Todos os direitos
+                    reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

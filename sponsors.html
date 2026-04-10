@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patrocinadores | Dragões Metálicos</title>
+  <meta name="description" content="Conheça as empresas e instituições que apoiam a equipe de robótica educacional Dragões Metálicos do Colégio Marista Sant'Ana.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .nav-active {
+      color: var(--color-primary) !important;
+    }
+
+    /* ── Sponsors page hero ── */
+    .sponsors-hero {
+      margin-top: 80px;
+      padding: var(--spacing-xl) 0 var(--spacing-lg);
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .breadcrumb {
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+      margin-bottom: var(--spacing-md);
+    }
+
+    .breadcrumb a {
+      color: var(--color-text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .breadcrumb a:hover {
+      color: var(--color-primary);
+    }
+
+    .breadcrumb span {
+      margin: 0 0.4rem;
+    }
+
+    .sponsors-hero h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .sponsors-hero-desc {
+      font-size: 1.1rem;
+      opacity: 0.75;
+      max-width: 600px;
+      margin-bottom: var(--spacing-lg);
+    }
+
+    .sponsors-hero-stats {
+      display: flex;
+      gap: var(--spacing-lg);
+      flex-wrap: wrap;
+    }
+
+    .sponsors-stat {
+      text-align: left;
+    }
+
+    .sponsors-stat-number {
+      font-family: var(--font-display);
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      line-height: 1;
+    }
+
+    .sponsors-stat-label {
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 600;
+      margin-top: 4px;
+    }
+
+    /* ── Sponsors content ── */
+    .sponsors-content {
+      padding: var(--spacing-xl) 0;
+    }
+
+    /* ── CTA box ── */
+    .sponsor-cta-box {
+      margin-top: var(--spacing-xl);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: 12px;
+      padding: var(--spacing-xl) var(--spacing-lg);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .sponsor-cta-box::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, transparent, var(--color-primary), transparent);
+    }
+
+    .sponsor-cta-box h2 {
+      font-size: clamp(1.5rem, 4vw, 2.5rem);
+      margin-bottom: var(--spacing-sm);
+    }
+
+    .sponsor-cta-box p {
+      font-size: 1.05rem;
+      opacity: 0.75;
+      max-width: 520px;
+      margin: 0 auto var(--spacing-lg);
+    }
+
+    @media (max-width: 768px) {
+      .sponsors-hero-stats {
+        gap: var(--spacing-md);
+      }
+
+      .sponsor-cta-box {
+        padding: var(--spacing-lg) var(--spacing-md);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <a href="index.html" class="logo">
+          <img src="logo.png" alt="Logo" class="logo-img" onerror="this.style.display='none'">Dragões Metálicos
+        </a>
+        <div class="nav-right">
+          <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+            <span class="menu-toggle-bar"></span>
+            <span class="menu-toggle-bar"></span>
+            <span class="menu-toggle-bar"></span>
+          </button>
+          <ul class="nav-links" id="navLinks">
+            <li><a href="index.html#projetos" data-en="Projects">Projetos</a></li>
+            <li><a href="index.html#conquistas" data-en="Achievements">Conquistas</a></li>
+            <li><a href="sponsors.html" class="nav-active" data-en="Sponsors">Patrocinadores</a></li>
+            <li><a href="gallery.html" data-en="Gallery">Galeria</a></li>
+            <li><a href="index.html#patrocinar" class="nav-cta" data-en="Become a Sponsor">Seja Patrocinador</a></li>
+          </ul>
+          <a href="https://hackclub.com" target="_blank" rel="noopener noreferrer" class="nav-hc-link" title="Hack Club">
+            <img src="hc_logo.png" alt="Hack Club" class="nav-hc-logo">
+          </a>
+          <button class="lang-toggle" id="langToggle" aria-label="Change language">
+            <span class="lang-option active" data-lang="pt">PT</span>
+            <span class="lang-divider">/</span>
+            <span class="lang-option" data-lang="en">EN</span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="sponsors-hero">
+    <div class="container">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Início</a>
+        <span aria-hidden="true">/</span>
+        Patrocinadores
+      </nav>
+      <h1 data-en="Our Sponsors">Nossos Patrocinadores</h1>
+      <p class="sponsors-hero-desc" data-en="Meet the companies and institutions that believe in our team and make our educational robotics projects possible.">
+        Conheça as empresas e instituições que acreditam em nossa equipe e tornam nossos projetos de robótica educacional possíveis.
+      </p>
+      <div class="sponsors-hero-stats">
+        <div class="sponsors-stat">
+          <div class="sponsors-stat-number" id="sponsorCount">0</div>
+          <div class="sponsors-stat-label" data-en="Active sponsors">Patrocinadores ativos</div>
+        </div>
+        <div class="sponsors-stat">
+          <div class="sponsors-stat-number">2026</div>
+          <div class="sponsors-stat-label" data-en="Current season">Temporada atual</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPONSORS GRID -->
+  <section class="sponsors-content">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title" data-en="Current Partners">Parceiros Atuais</h2>
+        <p class="section-description" data-en="Each sponsor below helps fund our robots, competition travel, and STEM education programs.">
+          Cada patrocinador abaixo contribui para nossos robôs, viagens para competições e programas de educação STEM.
+        </p>
+      </div>
+
+      <div class="sponsors-flat-grid" id="sponsorsGrid">
+        <!--
+          COMO ADICIONAR UM PATROCINADOR:
+          Substitua um bloco .sponsor-placeholder-card por:
+
+          <a href="https://sitedompatrocinador.com" target="_blank" rel="noopener" class="sponsor-card">
+            <img src="caminho/logo.png" alt="Nome do Patrocinador" class="sponsor-logo">
+            <span class="sponsor-name">Nome da Empresa</span>
+          </a>
+
+          Depois atualize o contador em initSponsors() abaixo.
+        -->
+        <a href="index.html#patrocinar" class="sponsor-placeholder-card">
+          <span class="sponsor-plus">+</span>
+          <span>Seja o primeiro patrocinador</span>
+        </a>
+        <a href="index.html#patrocinar" class="sponsor-placeholder-card">
+          <span class="sponsor-plus">+</span>
+          <span>Sua empresa aqui</span>
+        </a>
+        <a href="index.html#patrocinar" class="sponsor-placeholder-card">
+          <span class="sponsor-plus">+</span>
+          <span>Sua empresa aqui</span>
+        </a>
+      </div>
+
+      <!-- CTA -->
+      <div class="sponsor-cta-box">
+        <h2 data-en="Become a Sponsor">Seja Patrocinador</h2>
+        <p data-en="Partner with Dragões Metálicos and support the next generation of engineers. Your brand will be featured on our website, robot, and competition materials.">
+          Seja parceiro dos Dragões Metálicos e apoie a próxima geração de engenheiros. Sua marca será exibida em nosso site, robô e materiais de competição.
+        </p>
+        <a href="index.html#patrocinar" class="btn btn-primary" data-en="Fill out the sponsorship form">Preencher formulário de patrocínio</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-column">
+          <h3 class="footer-title">Dragões Metálicos</h3>
+          <p data-en="Educational robotics team from Colégio Marista Sant'Ana, building the future through innovation and teamwork.">
+            Equipe de robótica educacional do Colégio Marista Sant'Ana, construindo o futuro através da inovação e trabalho em equipe.
+          </p>
+        </div>
+        <div class="footer-column">
+          <h4 data-en="Quick Links">Links Rápidos</h4>
+          <ul>
+            <li><a href="index.html#projetos" data-en="Projects">Projetos</a></li>
+            <li><a href="index.html#conquistas" data-en="Achievements">Conquistas</a></li>
+            <li><a href="sponsors.html" data-en="Sponsors">Patrocinadores</a></li>
+            <li><a href="gallery.html" data-en="Gallery">Galeria</a></li>
+          </ul>
+        </div>
+        <div class="footer-column">
+          <h4 data-en="Contact">Contato</h4>
+          <ul>
+            <li><a href="mailto:contato@dragoesmetalicos.com">contato@dragoesmetalicos.com</a></li>
+            <li><a href="#" data-en="Instagram">Instagram</a></li>
+            <li><a href="#" data-en="GitHub">GitHub</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p data-en="© 2026 Dragões Metálicos. All rights reserved.">© 2026 Dragões Metálicos. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Count real sponsor-card elements (not placeholders) and update counter
+    function initSponsors() {
+      const grid = document.getElementById('sponsorsGrid');
+      const realSponsors = grid ? grid.querySelectorAll('.sponsor-card').length : 0;
+      const counter = document.getElementById('sponsorCount');
+      if (counter) counter.textContent = realSponsors;
+    }
+
+    document.addEventListener('DOMContentLoaded', initSponsors);
+  </script>
+</body>
+
+</html>
