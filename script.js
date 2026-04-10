@@ -14,6 +14,7 @@ let currentLang = 'pt';
 document.addEventListener('DOMContentLoaded', () => {
     initLanguageToggle();
     initSmoothScroll();
+    initMobileMenu();
     initFormHandling();
     loadDonors();
 });
@@ -116,6 +117,41 @@ function initSmoothScroll() {
             }
         });
     });
+}
+
+// ================================
+// MOBILE MENU (HAMBURGER)
+// ================================
+
+function initMobileMenu() {
+  const menuToggle = document.getElementById('menuToggle');
+  const navLinks = document.getElementById('navLinks');
+
+  if (!menuToggle || !navLinks) return;
+
+  menuToggle.addEventListener('click', () => {
+    const isOpen = navLinks.classList.toggle('is-open');
+    menuToggle.setAttribute('aria-expanded', isOpen);
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+
+  // Fechar ao clicar em qualquer link
+  navLinks.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('is-open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    });
+  });
+
+  // Fechar ao redimensionar para desktop
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+      navLinks.classList.remove('is-open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+  });
 }
 
 // ================================
